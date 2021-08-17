@@ -30,3 +30,7 @@ RPC를 통한 WorkerServer 함수 Invoke 예제 코드 수록 및 실행시간 �
 
 MSG QUEUE가 완전히 다른 네트워크에 있는 상태에서
 네트워크에 의한 지연 0.04초 가량이 추가된다고 볼 수 있다.
+
+## Figure
+
+<img src="images/figure.jpg">
