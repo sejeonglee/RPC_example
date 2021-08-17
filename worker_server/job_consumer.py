@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import pika, sys, os, json
 from worker import response_function
-from secret_params import CREDENTIALS, PARAMETERS
+from secret_params import PARAMETERS
 
 def main():
     with pika.BlockingConnection(parameters=PARAMETERS) as connection:

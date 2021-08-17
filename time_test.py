@@ -18,12 +18,7 @@ import time
 import json
 
 from worker_server.worker import response_function
-
-CREDENTIALS = pika.PlainCredentials('test_admin', 'admin1234')
-PARAMETERS = pika.ConnectionParameters('210.183.178.47',
-                                       25672,
-                                       '/',
-                                       credentials=CREDENTIALS)
+from worker_server.secret_params import PARAMETERS
 
 class RpcClient(object):
     """RPC CALL을 수행하는 클래스
