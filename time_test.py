@@ -37,7 +37,7 @@ class RpcClient(object):
         self.channel = self.connection.channel()
         self.channel.queue_declare(queue='rpc_queue')
         self.channel.queue_declare(queue='rpc_queue_return')
-        self.channel.basic_consume("rpc_queue_return", self.on_response)
+        self.channel.basic_consume("rpc_queue_return", self.on_response, auto_ack=True)
 
     def on_response(self, ch, method, props, body):
         if self.corr_id == props.correlation_id:

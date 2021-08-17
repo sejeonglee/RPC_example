@@ -1,12 +1,7 @@
 #!/usr/bin/env python
 import pika, sys, os, json
 from worker import response_function
-
-CREDENTIALS = pika.PlainCredentials('test_admin', 'admin1234')
-PARAMETERS = pika.ConnectionParameters('210.183.178.47',
-                                       25672,
-                                       '/',
-                                       credentials=CREDENTIALS)
+from secret_params import CREDENTIALS, PARAMETERS
 
 def main():
     with pika.BlockingConnection(parameters=PARAMETERS) as connection:
